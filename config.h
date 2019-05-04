@@ -61,9 +61,11 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *volup[]  = { "volup", NULL };
 static const char *voldown[]  = { "voldown", NULL };
+static const char *clearclipboard[]  = { "clear-clipboard", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY,                       XK_x,      spawn,          {.v = clearclipboard } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_Up,     spawn,          {.v = volup } },
