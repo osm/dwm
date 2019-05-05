@@ -62,6 +62,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *volup[]  = { "volup", NULL };
 static const char *voldown[]  = { "voldown", NULL };
 static const char *clearclipboard[]  = { "clear-clipboard", NULL };
+static const char *xtrlock[]  = { "xtrlock", "-b", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -70,6 +71,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_Up,     spawn,          {.v = volup } },
 	{ MODKEY,                       XK_Down,   spawn,          {.v = voldown } },
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = xtrlock } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_Left,   focusstack,     {.i = +1 } },
